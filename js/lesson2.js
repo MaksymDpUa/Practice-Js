@@ -224,3 +224,98 @@ const scientists = [
 // console.log(averYear);
 // console.log(scientists.length);
 // console.log(averYear / scientists.length);
+
+
+
+// 3) відсортувати по алфавіту
+
+// const scien = [...scientists].sort((a, b)=> a.name[0] > b.name[0] ? -1 : 1);
+
+// console.log(scien)
+
+
+
+// 4)відсортувати по кількості прожитих років;
+
+// const scien = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
+// console.log(scien)
+
+
+
+
+// 5)відфільтрувати, хто народився в 15,16,17ст
+
+// const arr = scientists.filter((el) => el.born >= 1400 && el.born < 1700);
+
+// console.log(arr);
+
+
+// 6)знайти рік народження Albert Einstein;
+
+// const scient = scientists.find(({name, surname}) => name === "Albert" && surname === "Einstein");
+
+// console.log(scient.born) 
+
+
+
+
+
+
+// 7)визначити, чи усі вчені працювали у 19ст;
+
+// const scie = scientists.every((elem) => elem.born >= 1800 && elem.dead < 1900);
+
+// console.log(scie)
+
+
+
+
+
+
+
+// ЗАДАЧА 5
+// Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
+// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+
+
+// ЗАДАЧА 6
+// Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
+// Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
+
+// const courses = [
+//   {
+//     name: "Basic HTML+CSS",
+//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+//   },
+//   {
+//     name: "Intermediate HTML+CSS",
+//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+//   },
+//   {
+//     name: "Basic JavaScript",
+//     topics: [
+//       "VSCode",
+//       "Type system",
+//       "Loops",
+//       "Functions",
+//       "Conditions",
+//       "Classes",
+//       "DOM",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+//   {
+//     name: "Intermediate JavaScript",
+//     topics: [
+//       "VSCode",
+//       "NPM",
+//       "Bundlers",
+//       "Transpiling",
+//       "Promises",
+//       "AJAX",
+//       "Git",
+//       "GitHub",
+//     ],
+//   },
+// ];
