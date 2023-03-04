@@ -90,13 +90,31 @@
 // letMeSeeYourName(callback) - запитує імя користувача, через prompt і викликає колбек функцію(callback)
 // greet(name) - колбек, який приймає імя і логінує в консоль рядок  "Привіт" + імя
 
-function letMeSeeYourName(callback) 
-{
-    let name = prompt("Назвіть своє ім'я");
-    callback(name);
+// function letMeSeeYourName(callback) 
+// {
+//     let name = prompt("Назвіть своє ім'я");
+//     callback(name);
     
-}
-function greet(name) {
-    console.log(`Привіт, ${name}`);
-}
-letMeSeeYourName(greet);
+// }
+// function greet(name) {
+//     console.log(`Привіт, ${name}`);
+// }
+// letMeSeeYourName(greet);
+
+
+// ЗАДАЧА 2
+// Напишіть дві функції:
+// makeProduct(name, price, callback) -приймає імя та ціну товару, а також колбек.Функція створює обєкт товару, добавляє йому унікальний ідентифікатор, в значення id і викликає колбек, передаючи йому створений обєкт.
+// showProduct(product) - колбек приймає обєкт продукта і логінує його в консоль;
+
+// function makeProduct(name, price, callback){
+//     const product = {
+//         name, price, id: Date.now(),
+//     }
+//     callback(product)
+// };
+// function showProduct(product) {
+//     console.log(product);
+// };
+
+// makeProduct("Холодильник", 100, showProduct);
