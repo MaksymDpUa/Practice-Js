@@ -218,3 +218,9 @@ const scientists = [
 // const arrNames = arr.map(({ name, surname }) => `${name}, ${surname}`);
 // console.log(arr);
 // console.log(arrNames);
+
+// // 2)порахувати загальну суму років скільки прожили вчені , і визначити середнє значення;
+// const averYear = scientists.reduce((acc, el) => acc + (el.dead - el.born), 0);
+// console.log(averYear);
+// console.log(scientists.length);
+// console.log(averYear / scientists.length);
