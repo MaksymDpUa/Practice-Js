@@ -60,7 +60,7 @@
 // ЗАДАЧА 3
 // Створи обєкт calculator(калькулятор) з 3-ма методами:
 // read()- запитує 2 значення у юзера і зберігає їх як значення обєкта;
-// sum() -повертає суму збережених значень; 
+// sum() -повертає суму збережених значень;
 // mult() -перемножує значення збережені і повертає результат;
 
 //  const calculator = {
@@ -85,3 +85,18 @@
 // calculator.read();
 // console.log(`sum`, calculator.sum());
 // console.log(`mult`, calculator.mult());
+// ЗАДАЧА 1
+// Напишіть дві функції:
+// letMeSeeYourName(callback) - запитує імя користувача, через prompt і викликає колбек функцію(callback)
+// greet(name) - колбек, який приймає імя і логінує в консоль рядок  "Привіт" + імя
+
+function letMeSeeYourName(callback) 
+{
+    let name = prompt("Назвіть своє ім'я");
+    callback(name);
+    
+}
+function greet(name) {
+    console.log(`Привіт, ${name}`);
+}
+letMeSeeYourName(greet);
