@@ -25,3 +25,27 @@
 
 // console.log(user);
 
+// ЗАДАЧА 2
+// У вас є обєкт , у якому зберігаються зарплати нашої команди.
+// Напишіть код , для підрахунку всіх зарплат і збережіть результат в змінні sum
+// Повинно получитись 390, якщо обєкт salaries пустий , то результат буде 0
+// ЩОБ МОЖНА БУЛО ПЕРЕВИКОРИСТОВУВАТИ ЛОГІКУ, ТОМУ ПИШЕМО ФУНКЦІЮ
+
+
+//  const salaries = {
+//    John: 100,
+//    Ann: 160,
+//    Pete: 130,
+//  };
+// function totalSalary(salaries) {
+//     let total = 0;
+//     for (const key in salaries) {
+//         total += salaries[key];
+//     }
+//     return total;
+    
+// }
+
+
+//  console.log(totalSalary(salaries));
+
