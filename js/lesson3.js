@@ -116,3 +116,42 @@
 // console.log(admin);
 // console.log(admin.changeName('Mango'));
 // console.log(admin.changeName('Mango'));
+
+// ЗАДАЧА 3
+// Напиши клас Storage який створює об'єкти для керування складом товарів.
+// При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
+// Добавте методи класу:
+
+// getItems() - повертає масив товарів.
+// addItem(item) - отримує новий товар та додає його до поточних.
+// removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
+
+
+
+// class Storage {
+//     constructor(items) {
+//         this.items = items;
+//     }
+
+//     getItems() {
+//         return this.items;
+//     }
+
+//     addItem(item) {
+//         this.items.push(item);
+//     }
+
+//     removeItem(item) {
+//         const index = this.items.indexOf(item);
+//         if (!!~index) {
+//             this.items.splice(index, 1);
+//         }
+//     }
+// }
+
+// const items = new Storage(["Виноград", "Банани", "Кокоси", "Ківі"]);
+// console.table(items);
+// items.addItem("Манго");
+// console.table(items);
+// items.removeItem("Ківі")
+// console.table(items)
