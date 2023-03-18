@@ -51,24 +51,68 @@
 // max.bio();
 // max.greeting();
 
-function PersonMaker(args) {
-    const { firstName, lastName, age, gender, interest } = args;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-    this.gender = gender;
-    this.interest = interest;
+// function PersonMaker(args) {
+//     const { firstName, lastName, age, gender, interest } = args;
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//     this.gender = gender;
+//     this.interest = interest;
 
-    PersonMaker.prototype.bio = function () {
-        console.log(`Привіт ${this.firstName} мені ${this.age} років. Мені подобається ${this.interest}`);
-    }
-        PersonMaker.prototype.greeting = function () {
-    console.log(`Привіт, я ${this.firstName}`)
-  }
-}
+//     PersonMaker.prototype.bio = function () {
+//         console.log(`Привіт ${this.firstName} мені ${this.age} років. Мені подобається ${this.interest}`);
+//     }
+//         PersonMaker.prototype.greeting = function () {
+//     console.log(`Привіт, я ${this.firstName}`)
+//   }
+// }
 
 
-const max = new PersonMaker({firstName: 'Max', lastName: 'Pon', age: 55, gender: 'male', interest: 'hobby'}) 
-console.log(max);
-max.bio();
-max.greeting();
+// const max = new PersonMaker({firstName: 'Max', lastName: 'Pon', age: 55, gender: 'male', interest: 'hobby'})
+// console.log(max);
+// max.bio();
+// max.greeting();
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+// class User {
+//     constructor({username, age, numberOfPosts}) {
+//         this.username = username;
+//         this.age = age;
+//         this.numberOfPosts = numberOfPosts;
+//     }
+
+//     getInfo() {
+//         return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//     }
+
+//     greating = () => {return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts`;}
+// }
+
+// const user1 = new User({username: 'User 1', age: 20, numberOfPosts: 10});
+// console.log(user1.getInfo());
+// console.log(user1);
+// console.log(user1.greating());
+
+// class Admin extends User {
+//   constructor({ username, age, numberOfPosts, email }) {
+//       super({ username, age, numberOfPosts });
+//       this.email = email;
+//     }
+    
+//     changeName(name) {
+//         return this.username = name;
+//     }
+// }
+
+// const admin = new Admin({ username: "User 1", age: 20, numberOfPosts: 10, email: 'admin@gmail.com' });
+// console.log(admin);
+// console.log(admin.changeName('Mango'));
+// console.log(admin.changeName('Mango'));
