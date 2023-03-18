@@ -254,7 +254,7 @@ const scientists = [
 
 // const scient = scientists.find(({name, surname}) => name === "Albert" && surname === "Einstein");
 
-// console.log(scient.born) 
+// console.log(scient.born)
 
 
 
@@ -319,3 +319,6 @@ const scientists = [
 //     ],
 //   },
 // ];
+
+
+// https://github.com/MaksymDpUa
