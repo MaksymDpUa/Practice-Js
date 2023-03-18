@@ -286,7 +286,6 @@
 // // Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
 // // Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
 
-<<<<<<< HEAD
 // ЗАДАЧА 6
 // Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
 // Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
@@ -294,7 +293,7 @@ const allTopics = courses.flatMap(({ topics }) => topics).filter((cours, index,a
 console.log(allTopics);
 
 // https://github.com/MaksymDpUa
-=======
+
 // // const courses = [
 // //   {
 // //     name: "Basic HTML+CSS",
@@ -355,4 +354,3 @@ console.log(allTopics);
 //   console.log(arr);
 // }
 // console.log(DNAStrand("AAAAA"));
->>>>>>> 285cc56673f1ae2ef0e5a6bfd1e512cc3e572d15
