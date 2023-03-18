@@ -275,50 +275,57 @@ const scientists = [
 
 // ЗАДАЧА 5
 // Виконати сортування масиву назв моніторів в алфавітному та зворотному алфавітному порядку.
-// const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
+const items = ["SAMSUNG", "LG", "ASUS", "DELL", "BENQ"];
 
+const sortMonitor = items.sort((a, b) => a.localeCompare(b));
+console.log(sortMonitor);
+
+const sortMonitorReverse = items.sort((a, b) => a[0] - b[0] ? 1 : -1);
+console.log(sortMonitorReverse);
+
+
+const courses = [
+  {
+    name: "Basic HTML+CSS",
+    topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
+  },
+  {
+    name: "Intermediate HTML+CSS",
+    topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
+  },
+  {
+    name: "Basic JavaScript",
+    topics: [
+      "VSCode",
+      "Type system",
+      "Loops",
+      "Functions",
+      "Conditions",
+      "Classes",
+      "DOM",
+      "Git",
+      "GitHub",
+    ],
+  },
+  {
+    name: "Intermediate JavaScript",
+    topics: [
+      "VSCode",
+      "NPM",
+      "Bundlers",
+      "Transpiling",
+      "Promises",
+      "AJAX",
+      "Git",
+      "GitHub",
+    ],
+  },
+];
 
 // ЗАДАЧА 6
 // Зібрати в allTopics масив усіх предметів всіх курсів використовуючи flatMap.
 // Використовуючи Array.prototype.filter виконати фільтрацію, залишивши в uniqueTopics тільки унікальні елементи.
-
-// const courses = [
-//   {
-//     name: "Basic HTML+CSS",
-//     topics: ["VSCode", "HTML", "CSS", "GitHub Desktop", "GitHub"],
-//   },
-//   {
-//     name: "Intermediate HTML+CSS",
-//     topics: ["VSCode", "Terminal", "Git", "GitHub", "HTML", "CSS"],
-//   },
-//   {
-//     name: "Basic JavaScript",
-//     topics: [
-//       "VSCode",
-//       "Type system",
-//       "Loops",
-//       "Functions",
-//       "Conditions",
-//       "Classes",
-//       "DOM",
-//       "Git",
-//       "GitHub",
-//     ],
-//   },
-//   {
-//     name: "Intermediate JavaScript",
-//     topics: [
-//       "VSCode",
-//       "NPM",
-//       "Bundlers",
-//       "Transpiling",
-//       "Promises",
-//       "AJAX",
-//       "Git",
-//       "GitHub",
-//     ],
-//   },
-// ];
-
+const allTopics = courses.flatMap(({ topics }) => topics).filter((cours, index,array) => array.indexOf(cours) === index);
+console.log(allTopics);
 
 // https://github.com/MaksymDpUa
