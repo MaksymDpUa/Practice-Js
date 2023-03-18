@@ -67,7 +67,6 @@
 //   }
 // }
 
-
 // const max = new PersonMaker({firstName: 'Max', lastName: 'Pon', age: 55, gender: 'male', interest: 'hobby'})
 // console.log(max);
 // max.bio();
@@ -106,7 +105,7 @@
 //       super({ username, age, numberOfPosts });
 //       this.email = email;
 //     }
-    
+
 //     changeName(name) {
 //         return this.username = name;
 //     }
@@ -125,8 +124,6 @@
 // getItems() - повертає масив товарів.
 // addItem(item) - отримує новий товар та додає його до поточних.
 // removeItem(item) - отримає товар і, якщо він є, видаляє його з поточних.
-
-
 
 // class Storage {
 //     constructor(items) {
@@ -155,3 +152,38 @@
 // console.table(items);
 // items.removeItem("Ківі")
 // console.table(items)
+
+// ЗАДАЧА 4
+// Напиши клас Client який створює об'єкт із властивостями login і email.
+// Оголоси приватні властивості #login і #email, доступ до яких зроби через геттер та сеттер login і email.
+
+class Client {
+  #login;
+  #email;
+  constructor(login, email) {
+    this.#login = login;
+    this.#email = email;
+  }
+  get login() {
+    return this.#login;
+  }
+
+  set login(newLogin) {
+    this.#login = newLogin;
+    console.log(this.#login);
+  }
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(newEmail) {
+    this.#email = newEmail;
+    console.log(this.#email);
+  }
+}
+
+const client1 = new Client("clienA", "gm@gmail.com");
+console.log(client1);
+client1.email = "us1@gm.com";
+// console.log(client1.email);
