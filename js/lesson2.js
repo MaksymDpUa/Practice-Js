@@ -234,8 +234,6 @@
 // // // console.log(scien)
 
 
-
-<<<<<<< Updated upstream
 // // // 4)відсортувати по кількості прожитих років;
 
 // // // const scien = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
@@ -255,9 +253,6 @@
 
 // // // const scient = scientists.find(({name, surname}) => name === "Albert" && surname === "Einstein");
 
-// <<<<<<< HEAD
-// // console.log(scient.born)
-// =======
 // // // console.log(scient.born)
 // >>>>>>> 285cc56673f1ae2ef0e5a6bfd1e512cc3e572d15
 
@@ -355,7 +350,6 @@
 // //   console.log(arr);
 // // }
 // // console.log(DNAStrand("AAAAA"));
-=======
 // function letMeSeeYourName(callback) 
 // {
 //     let name = prompt("Назвіть своє ім'я");
@@ -366,4 +360,3 @@
 //     console.log(`Привіт, ${name}`);
 // }
 // letMeSeeYourName(greet);
->>>>>>> Stashed changes
