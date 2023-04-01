@@ -235,6 +235,7 @@
 
 
 
+<<<<<<< Updated upstream
 // // // 4)відсортувати по кількості прожитих років;
 
 // // // const scien = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
@@ -354,3 +355,15 @@
 // //   console.log(arr);
 // // }
 // // console.log(DNAStrand("AAAAA"));
+=======
+// function letMeSeeYourName(callback) 
+// {
+//     let name = prompt("Назвіть своє ім'я");
+//     callback(name);
+    
+// }
+// function greet(name) {
+//     console.log(`Привіт, ${name}`);
+// }
+// letMeSeeYourName(greet);
+>>>>>>> Stashed changes
