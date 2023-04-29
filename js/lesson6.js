@@ -25,7 +25,6 @@
 //   }
 // // }
 
-
 // ЗАДАЧА 2
 // ВИКОРИСТОВУЮЧИ API ДАНОГО ПОСИЛАННЯ  https://www.thecocktaildb.com/api.php , ТА ЗА ДОПОМОГОЮ fetch, ВИВОДЬ РЕЗУЛЬТАТ НА ЕКРАН.
 // РЕЗУЛЬТАТ ПОШУКУ МОЖНА ОТРИМАТИ ІЗ ІМПУТА, КОЛИ КЛІЄНТ НАБРАВ ДАНИЙ ТОВАР(ВИКОРИСТАЙ РОЗМІТКУ ЗА ДОПОМОГОЮ ШАБЛОННОГО РЯДКА)
@@ -36,28 +35,80 @@
 //       <button>Пошук</button>
 //     </form>
 //   </div>
-const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
-const formEl = document.querySelector('#form');
-const inputEl = document.querySelector('#input');
-const container = document.querySelector('.Js-container')
+// const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php'
+// const formEl = document.querySelector('#form');
+// const inputEl = document.querySelector('#input');
+// const container = document.querySelector('.Js-container')
 
-formEl.addEventListener('submit', onInput)
+// formEl.addEventListener('submit', onInput)
+
+// function onInput(evt) {
+//   evt.preventDefault();
+//   const value = inputEl.value;
+
+//   fetch(`${URL}?s=${value}`).then(resp=>resp.json()).then(data=> createList(data.drinks
+// )).catch(err=>console.log(err))
+// }
+
+// function createMarkUp ({ strDrinkThumb, strDrink
+// }) {
+//   const markUp = `<div><img src="${strDrinkThumb}" alt="${strDrink}">
+//   <p>${strDrink}</p></div>`;
+//   container.insertAdjacentHTML('beforeend',markUp)
+// };
+
+// function createList(arr) {
+//   arr.forEach(el=>createMarkUp(el))
+// };
+
+// ЗАДАЧА 3
+// НАПИШІТЬ ПАГІНАЦІЮ, ДЛЯ ПЕРЕХОДУ ПО СТОРІНКАХ
+// https://docs.github.com/en/rest/search?apiVersion=2022-11-28#search-user
+//  <div id='root'>
+//     <form id='form'>
+//         <input type="text" id="input">
+//       <button>Пошук</button>
+//     </form>
+//   </div>
+// fetch(`https://api.github.com/search/users?q=${}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c`)
+
+const form = document.querySelector("#form");
+const input = document.querySelector("#input");
+const divUser = document.querySelector(".js-user");
+const btnNestPage = document.querySelector(".js-btn");
+let pageItems = 1;
+
+form.addEventListener("submit", onInput);
 
 function onInput(evt) {
   evt.preventDefault();
-  const value = inputEl.value;
-  
-  fetch(`${URL}?s=${value}`).then(resp=>resp.json()).then(data=> createList(data.drinks
-)).catch(err=>console.log(err))
+  const inputValue = input.value;
+
+  fetch(
+    `https://api.github.com/search/users?q=${inputValue}&client_id=67684cabc84f94f0938e&client_secret=782ea639550c1b5d986bdd8129813652ed04c92c&page=${pageItems}&per_page=5`
+  )
+    .then((resp) => resp.json())
+    .then((data) => {
+      if (data.items.length > 0) {
+        createList(data.items);
+        pageItems++;
+      } else {
+        alert("The end");
+      }
+    })
+    .catch((err) => console.log(err.message));
 }
 
-function createMarkUp ({ strDrinkThumb, strDrink
-}) {
-  const markUp = `<div><img src="${strDrinkThumb}" alt="${strDrink}">
-  <p>${strDrink}</p></div>`;
-  container.insertAdjacentHTML('beforeend',markUp)
-};
+function createMarkup({ avatar_url, login }) {
+  const markup = `<div>
+    <img src="${avatar_url}" alt="${login}">
+    <h2>${login}</h2>
+  </div>`;
+  divUser.insertAdjacentHTML("beforeend", markup);
+}
 
 function createList(arr) {
-  arr.forEach(el=>createMarkUp(el))
-};
+  arr.forEach((item) => createMarkup(item));
+}
+
+btnNestPage.addEventListener("click", onInput);
