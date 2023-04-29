@@ -41,6 +41,7 @@
 // const container = document.querySelector('.Js-container')
 
 // formEl.addEventListener('submit', onInput)
+<<<<<<< Updated upstream
 
 // function onInput(evt) {
 //   evt.preventDefault();
@@ -112,3 +113,24 @@ function createList(arr) {
 }
 
 btnNestPage.addEventListener("click", onInput);
+=======
+
+// function onInput(evt) {
+//   evt.preventDefault();
+//   const value = inputEl.value;
+  
+//   fetch(`${URL}?s=${value}`).then(resp=>resp.json()).then(data=> createList(data.drinks
+// )).catch(err=>console.log(err))
+// }
+
+// function createMarkUp ({ strDrinkThumb, strDrink
+// }) {
+//   const markUp = `<div><img src="${strDrinkThumb}" alt="${strDrink}">
+//   <p>${strDrink}</p></div>`;
+//   container.insertAdjacentHTML('beforeend',markUp)
+// };
+
+// function createList(arr) {
+//   arr.forEach(el=>createMarkUp(el))
+// };
+>>>>>>> Stashed changes
